@@ -1,0 +1,83 @@
+{
+	"info": {
+		"_postman_id": "56d45df6-c2e8-4283-8c0f-a61e233ba8d1",
+		"name": "collentions",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "22753744",
+		"_collection_link": "https://planetary-satellite-311679.postman.co/workspace/study_app_project~e995d4e5-1c5e-422e-9f9f-bb24192c0768/collection/22753744-56d45df6-c2e8-4283-8c0f-a61e233ba8d1?action=share&creator=22753744&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"victorcde564@gmail.com\",\r\n    \"password\" : \"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/user/login"
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"victorcde564@gmail.com\",\r\n    \"password\" : \"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/user/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"name\": \"Victor\",\r\n    \"last_name\": \"ortiz\",\r\n    \"avatar\": null,\r\n    \"email\": \"victorcde564@gmail.com\",\r\n    \"password\": \"12345\",\r\n    \"deleted\":false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/users/update"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:3000/users/delete/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Listar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/users/list"
+			},
+			"response": []
+		}
+	]
+}
