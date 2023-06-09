@@ -49,8 +49,12 @@
 
         <!-- Boton para agregar propiedad -->
         <div class="ion-padding" slot="content">
-          <ion-icon slot="end" size="large" name="add-circle"></ion-icon>
+          <ion-button [routerLink]="'/theme-prop-list'">
+            <ion-icon slot="end" size="large" name="add-circle"></ion-icon>
+          </ion-button>
         </div>
+
+
       </ion-accordion>
     </ion-accordion-group>
   </ion-card>

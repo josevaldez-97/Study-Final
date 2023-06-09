@@ -64,6 +64,22 @@ const routes: Routes = [
       ),
   },
   {
+    path: 'theme-prop-edit/:id',
+    loadChildren: () =>
+      import('./theme-prop-edit/theme-prop-edit.module').then(
+        (m) => m.ThemePropEditPageModule
+      ),
+  },
+  {
+    path: 'theme-prop-list',
+    loadChildren: () =>
+      import('./theme-prop-list/theme-prop-list.module').then(
+        (m) => m.ThemePropListPageModule
+      ),
+  },
+
+
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full',
