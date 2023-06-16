@@ -35,8 +35,15 @@
   </ion-card>
 
   <ion-fab slot="fixed" vertical="bottom" horizontal="end">
-    <ion-fab-button (click)="loginUser()">
-      <ion-icon name="log-in-outline"></ion-icon>
+    <ion-fab-button (click)="loginUser()"> 
+      <ion-icon name="log-in-outline">Iniciar Sension</ion-icon>
     </ion-fab-button>
   </ion-fab>
+
+
+<ion-button  [routerLink]="'/user-list'">
+  <ion-label>Regitrarse</ion-label>
+</ion-button>
+
+
 </ion-content>

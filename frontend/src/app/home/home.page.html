@@ -1,7 +1,24 @@
 <ion-router-outlet></ion-router-outlet>
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  
+  <ion-toolbar custom-page >
+    <h1>Study App</h1>
     <ion-title>Study App</ion-title>
+    <div class="ion-page" id="main-content">
+      <ion-header>
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-menu-button> 
+              <ion-icon name="grid-outline"></ion-icon>
+            </ion-menu-button>
+          </ion-buttons>
+          <ion-title>Study App  Jose Valdez
+          </ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding"> </ion-content>
+    </div>
+   
     <ion-buttons slot="end">
       <ion-button (click)="cerrarSesion()">
         <ion-icon name="log-out-outline"></ion-icon>
@@ -14,6 +31,46 @@
   <ion-refresher-content></ion-refresher-content>
 </ion-refresher>
 
+
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>
+      Menu  Principal </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">Study App Funciones
+    <h2>
+      <ion-item>
+        <ion-label [routerLink]="'/topic-list'">
+          <ion-icon name="document-text-outline"></ion-icon>
+          Topicos
+        </ion-label>
+      </ion-item>
+    </h2>
+    <h2>
+      <ion-item>
+        <ion-label [routerLink]="'/theme-list'">
+          <ion-icon name="document-text-outline"></ion-icon>
+          Temas
+        </ion-label>
+      </ion-item>
+    </h2>
+    <h2>
+      <ion-item>
+        <ion-label [routerLink]="'/user-list'">
+          <ion-icon name="person-circle-outline"></ion-icon>
+          Usuarios
+        </ion-label>
+      </ion-item>
+    </h2>
+  </ion-content>
+</ion-menu>
+
+
+
+
+
 <ion-content [fullscreen]="true" *ngIf="temas">
   <ion-tabs>
     <ion-tab-bar slot="bottom">
@@ -25,10 +82,7 @@
         <ion-icon name="document-text-outline"></ion-icon>
         Temas
       </ion-tab-button>
-      <ion-tab-button [routerLink]="'/user-list'">
-        <ion-icon name="person-circle-outline"></ion-icon>
-        Usuarios
-      </ion-tab-button>
+
     </ion-tab-bar>
   </ion-tabs>
   <ion-card>
@@ -36,9 +90,7 @@
       <!-- Impresion de tema -->
       <ion-accordion *ngFor="let tema of temas">
         <ion-item slot="header" color="light">
-          <ion-label
-            >{{tema.id}} - {{tema.name}} - {{tema.description}}</ion-label
-          >
+          <ion-label>{{tema.id}} - {{tema.name}} - {{tema.description}}</ion-label>
         </ion-item>
         <!-- Impresion de propiedades del tema -->
         <div *ngFor="let tema_propiedad of temas_propiedades" slot="content">
