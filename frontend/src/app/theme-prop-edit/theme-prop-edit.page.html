@@ -23,12 +23,21 @@
           <ion-list>
             <ion-item>
               <ion-input
-                label="Codigo :"
+                label="Temas Propiedad Id :"
                 label-placement="stacked"
-                placeholder="Ingrese Codigo"
+                placeholder="Ingrese id"
                 [(ngModel)]="theme_Prop.id"
               ></ion-input>
             </ion-item>
+            <ion-item>
+            <ion-input
+            label="Temas Descripcion :"
+            label-placement="stacked"
+            placeholder="Ingrese Codigo"
+            [(ngModel)]="theme_Prop.theme_id"
+          ></ion-input>
+        </ion-item>
+
             <ion-item>
               <ion-input
                 label="Descripcion Propiedad :"
@@ -37,15 +46,32 @@
                 [(ngModel)]="theme_Prop.property_name"
               ></ion-input>
             </ion-item>
-            <ion-item>
+
+          <!--  <ion-item>
               <ion-input
-                label="Datos  :"
+                label="Color  :"
                 labelPlacement="stacked"
-                placeholder="Ingrese Propiedad datos"
+                placeholder="Ingrese Propiedad color"
                 [(ngModel)]="theme_Prop.property_value"
               ></ion-input>
             </ion-item>
+            -->
+
+            <ion-item>
+              <ion-label>Color:</ion-label>
+              <ion-button (click)="openColorPicker()">Seleccionar Color</ion-button>
+
+              <ion-color-picker [(ngModel)]="theme_Prop.property_value"></ion-color-picker>
+
+            </ion-item>
+
           </ion-list>
+
+          <ion-title [ngClass]="{'color-title': theme_Prop.property_value}">{{ accion }}</ion-title>
+
+
+         
+          
 
       </ion-label>
     </ion-item>
