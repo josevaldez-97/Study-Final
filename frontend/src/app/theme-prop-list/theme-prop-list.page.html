@@ -16,7 +16,7 @@
     <!-- NOMBRE Y DESCRIPCION DEL TEMA-->
     <ion-item *ngFor="let themes_properties of themes_properties">
       <ion-label [routerLink]="'/theme-prop-edit/'+themes_properties.id"
-        >{{themes_properties.id}} - {{themes_properties.property_name}} - {{themes_properties.property_value}}</ion-label
+        >{{themes_properties.id}} -  {{themes_properties.theme_id}} - {{themes_properties.property_name}} - {{themes_properties.property_value}}</ion-label
       >
       <!-- EDITAR TEMA-->
       <ion-icon

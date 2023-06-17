@@ -47,7 +47,7 @@
               ></ion-input>
             </ion-item>
 
-          <!--  <ion-item>
+            <ion-item>
               <ion-input
                 label="Color  :"
                 labelPlacement="stacked"
@@ -55,22 +55,12 @@
                 [(ngModel)]="theme_Prop.property_value"
               ></ion-input>
             </ion-item>
-            -->
-
-            <ion-item>
-              <ion-label>Color:</ion-label>
-              <ion-button (click)="openColorPicker()">Seleccionar Color</ion-button>
-
-              <ion-color-picker [(ngModel)]="theme_Prop.property_value"></ion-color-picker>
-
-            </ion-item>
-
           </ion-list>
 
-          <ion-title [ngClass]="{'color-title': theme_Prop.property_value}">{{ accion }}</ion-title>
-
-
-         
+          <ion-item>
+            <ion-label>Color:</ion-label>
+            <ion-color-picker [(ngModel)]="theme_Prop.property_value"></ion-color-picker>
+          </ion-item>
           
 
       </ion-label>

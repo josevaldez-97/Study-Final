@@ -17,6 +17,8 @@ export class LoginPage implements OnInit {
   private platform = inject(Platform);
   usuario: any = '';
 
+  
+
   constructor(
     private toastController: ToastController,
     private router: Router
@@ -68,7 +70,14 @@ export class LoginPage implements OnInit {
       .catch(async (error) => {
         this.presentToast(error.message);
       });
+
   }
+ 
+
+
+
+
+
   ionViewWillEnter(): void {
     //verificar si el usuario esta logueado
     let token = localStorage.getItem('token');

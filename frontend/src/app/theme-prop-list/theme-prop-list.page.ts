@@ -26,7 +26,7 @@ export class ThemePropListPage implements OnInit {
       this.router.navigate(['/home']);
       return;
     }
-    this.getThemes();
+    this.getThemesPropiedades();
   }
 
   ngOnInit() {}
@@ -53,7 +53,7 @@ export class ThemePropListPage implements OnInit {
     await alert.present();
   }
 
-  getThemes() {
+  getThemesPropiedades() {
     let token = localStorage.getItem('token');
     let config = {
       headers: {
@@ -86,7 +86,7 @@ export class ThemePropListPage implements OnInit {
       .then((result) => {
         if (result.data.success == true) {
           this.presentToast('Tema propiedad  Eliminado');
-          this.getThemes();
+          this.getThemesPropiedades();
         } else {
           this.presentToast(result.data.error);
         }

@@ -5,6 +5,9 @@ import { IonicModule, Platform, ToastController } from '@ionic/angular';
 import { DataService, Message } from '../services/data.service';
 import axios from 'axios';
 
+
+
+
 @Component({
   selector: 'app-theme-prop-edit',
   templateUrl: './theme-prop-edit.page.html',
@@ -67,10 +70,11 @@ export class ThemePropEditPage implements OnInit {
     };
    
     var data = {
-                id: this.theme_Prop.id,
+      id: this.theme_Prop.id,
+      theme_id: this.theme_Prop.theme_id,
       propety_name: this.theme_Prop.property_name,
-    property_value: this.theme_Prop.property_value,
-     owner_user_id: 1,
+      property_value: this.theme_Prop.property_value
+    
     };
     console.log('themes_properties: ', data);
     axios
@@ -97,3 +101,4 @@ export class ThemePropEditPage implements OnInit {
     await toast.present();
   }
 }
+
